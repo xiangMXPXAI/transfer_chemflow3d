@@ -1,0 +1,11 @@
+{
+  "tag": "hj",
+  "method": "pde",
+  "property": "width",
+  "num_samples": 908,
+  "mean_delta": 1.1908928155899048,
+  "median_delta": 1.1887705326080322,
+  "positive_delta_rate": 1.0,
+  "mean_latent_path_length": 1.0,
+  "mean_decoded_path_length": 0.02100760117173195
+}

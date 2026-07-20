@@ -1,0 +1,11 @@
+{
+  "tag": "random",
+  "method": "random",
+  "property": "volume",
+  "num_samples": 908,
+  "mean_delta": 0.01871800236403942,
+  "median_delta": 0.02000129222869873,
+  "positive_delta_rate": 0.5748898386955261,
+  "mean_latent_path_length": 1.0000001192092896,
+  "mean_decoded_path_length": 0.0025942944921553135
+}

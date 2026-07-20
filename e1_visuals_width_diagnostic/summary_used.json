@@ -1,0 +1,46 @@
+{
+  "random": {
+    "tag": "random",
+    "method": "random",
+    "property": "width",
+    "num_samples": 908,
+    "mean_delta": 0.006606873590499163,
+    "median_delta": 0.0071585774421691895,
+    "positive_delta_rate": 0.5759912133216858,
+    "mean_latent_path_length": 1.0000001192092896,
+    "mean_decoded_path_length": 0.0025942944921553135
+  },
+  "property_gradient": {
+    "tag": "property_gradient",
+    "method": "property_gradient",
+    "property": "width",
+    "num_samples": 908,
+    "mean_delta": 1.2980788946151733,
+    "median_delta": 1.2970120906829834,
+    "positive_delta_rate": 1.0,
+    "mean_latent_path_length": 1.0,
+    "mean_decoded_path_length": 0.022195996716618538
+  },
+  "wave": {
+    "tag": "wave",
+    "method": "pde",
+    "property": "width",
+    "num_samples": 908,
+    "mean_delta": 1.1919397115707397,
+    "median_delta": 1.1882872581481934,
+    "positive_delta_rate": 1.0,
+    "mean_latent_path_length": 0.9999994039535522,
+    "mean_decoded_path_length": 0.020992249250411987
+  },
+  "hj": {
+    "tag": "hj",
+    "method": "pde",
+    "property": "width",
+    "num_samples": 908,
+    "mean_delta": 1.1908928155899048,
+    "median_delta": 1.1887705326080322,
+    "positive_delta_rate": 1.0,
+    "mean_latent_path_length": 1.0,
+    "mean_decoded_path_length": 0.02100760117173195
+  }
+}

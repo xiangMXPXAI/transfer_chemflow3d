@@ -1,0 +1,11 @@
+{
+  "tag": "property_gradient",
+  "method": "property_gradient",
+  "property": "volume",
+  "num_samples": 908,
+  "mean_delta": 7.631754398345947,
+  "median_delta": 7.376110553741455,
+  "positive_delta_rate": 1.0,
+  "mean_latent_path_length": 1.0,
+  "mean_decoded_path_length": 0.02491130121052265
+}

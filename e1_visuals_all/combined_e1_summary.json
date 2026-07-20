@@ -1,0 +1,140 @@
+{
+  "height": {
+    "random": {
+      "tag": "random",
+      "method": "random",
+      "property": "height",
+      "num_samples": 908,
+      "mean_delta": 0.0039024660363793373,
+      "median_delta": 0.00501251220703125,
+      "positive_delta_rate": 0.5517621040344238,
+      "mean_latent_path_length": 1.0000001192092896,
+      "mean_decoded_path_length": 0.0025942944921553135
+    },
+    "property_gradient": {
+      "tag": "property_gradient",
+      "method": "property_gradient",
+      "property": "height",
+      "num_samples": 908,
+      "mean_delta": 1.552474856376648,
+      "median_delta": 1.553892731666565,
+      "positive_delta_rate": 1.0,
+      "mean_latent_path_length": 1.0,
+      "mean_decoded_path_length": 0.028687570244073868
+    },
+    "wave": {
+      "tag": "wave",
+      "method": "pde",
+      "property": "height",
+      "num_samples": 908,
+      "mean_delta": 1.4319190979003906,
+      "median_delta": 1.4440174102783203,
+      "positive_delta_rate": 1.0,
+      "mean_latent_path_length": 0.9999998807907104,
+      "mean_decoded_path_length": 0.026316791772842407
+    },
+    "hj": {
+      "tag": "hj",
+      "method": "pde",
+      "property": "height",
+      "num_samples": 908,
+      "mean_delta": 1.4293538331985474,
+      "median_delta": 1.446721076965332,
+      "positive_delta_rate": 1.0,
+      "mean_latent_path_length": 1.0,
+      "mean_decoded_path_length": 0.02633652463555336
+    }
+  },
+  "width": {
+    "random": {
+      "tag": "random",
+      "method": "random",
+      "property": "width",
+      "num_samples": 908,
+      "mean_delta": 0.006606873590499163,
+      "median_delta": 0.0071585774421691895,
+      "positive_delta_rate": 0.5759912133216858,
+      "mean_latent_path_length": 1.0000001192092896,
+      "mean_decoded_path_length": 0.0025942944921553135
+    },
+    "property_gradient": {
+      "tag": "property_gradient",
+      "method": "property_gradient",
+      "property": "width",
+      "num_samples": 908,
+      "mean_delta": 1.2980788946151733,
+      "median_delta": 1.2970120906829834,
+      "positive_delta_rate": 1.0,
+      "mean_latent_path_length": 1.0,
+      "mean_decoded_path_length": 0.022195996716618538
+    },
+    "wave": {
+      "tag": "wave",
+      "method": "pde",
+      "property": "width",
+      "num_samples": 908,
+      "mean_delta": 1.1919397115707397,
+      "median_delta": 1.1882872581481934,
+      "positive_delta_rate": 1.0,
+      "mean_latent_path_length": 0.9999994039535522,
+      "mean_decoded_path_length": 0.020992249250411987
+    },
+    "hj": {
+      "tag": "hj",
+      "method": "pde",
+      "property": "width",
+      "num_samples": 908,
+      "mean_delta": 1.1908928155899048,
+      "median_delta": 1.1887705326080322,
+      "positive_delta_rate": 1.0,
+      "mean_latent_path_length": 1.0,
+      "mean_decoded_path_length": 0.02100760117173195
+    }
+  },
+  "volume": {
+    "random": {
+      "tag": "random",
+      "method": "random",
+      "property": "volume",
+      "num_samples": 908,
+      "mean_delta": 0.01871800236403942,
+      "median_delta": 0.02000129222869873,
+      "positive_delta_rate": 0.5748898386955261,
+      "mean_latent_path_length": 1.0000001192092896,
+      "mean_decoded_path_length": 0.0025942944921553135
+    },
+    "property_gradient": {
+      "tag": "property_gradient",
+      "method": "property_gradient",
+      "property": "volume",
+      "num_samples": 908,
+      "mean_delta": 7.631754398345947,
+      "median_delta": 7.376110553741455,
+      "positive_delta_rate": 1.0,
+      "mean_latent_path_length": 1.0,
+      "mean_decoded_path_length": 0.02491130121052265
+    },
+    "wave": {
+      "tag": "wave",
+      "method": "pde",
+      "property": "volume",
+      "num_samples": 908,
+      "mean_delta": 5.194540977478027,
+      "median_delta": 4.892232894897461,
+      "positive_delta_rate": 1.0,
+      "mean_latent_path_length": 0.999999463558197,
+      "mean_decoded_path_length": 0.018786633387207985
+    },
+    "hj": {
+      "tag": "hj",
+      "method": "pde",
+      "property": "volume",
+      "num_samples": 908,
+      "mean_delta": 5.1254496574401855,
+      "median_delta": 4.837441444396973,
+      "positive_delta_rate": 1.0,
+      "mean_latent_path_length": 1.0,
+      "mean_decoded_path_length": 0.018626227974891663
+    }
+  }
+}

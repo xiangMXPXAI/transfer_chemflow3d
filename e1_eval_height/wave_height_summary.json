@@ -1,0 +1,11 @@
+{
+  "tag": "wave",
+  "method": "pde",
+  "property": "height",
+  "num_samples": 908,
+  "mean_delta": 1.4319190979003906,
+  "median_delta": 1.4440174102783203,
+  "positive_delta_rate": 1.0,
+  "mean_latent_path_length": 0.9999998807907104,
+  "mean_decoded_path_length": 0.026316791772842407
+}
