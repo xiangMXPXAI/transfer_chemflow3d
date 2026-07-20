@@ -170,7 +170,6 @@ python -m chemflow3d.scripts.train_flow `
   --target-class 8 `
   --epochs 50
 
-powershell
 python -m chemflow3d.scripts.eval_class_traversal `
   --cache-root chemflow3d_cache/modelnet10_1024 `
   --ae-ckpt chemflow3d_runs/e0_ae/best.pt `
