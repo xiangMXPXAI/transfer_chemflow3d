@@ -48,8 +48,7 @@ ModelNet10 mesh / point cloud
 从实验结果看，PDE 正则并没有在所有任务上压倒 no-pde。更准确的判断是：ChemFlow-style latent flow 在点云 latent space 中可行，但不同 PDE 对不同几何方向的影响需要继续系统研究。
 
 ## 文档入口
-
-主线文档已经整合为两篇，旧过程报告已归档到 `docs_archive/`。
+包含两篇中文说明文档：
 
 | 文档 | 内容 |
 |---|---|
@@ -85,11 +84,42 @@ OS: Windows / PowerShell
 ```
 
 
-## 常用命令
+## 命令
 
-下面列主线命令。具体参数可根据本地路径调整。
+主线实验命令：
+### E0-1：ModelNet10 预处理
 
-### E0：评估 AE 与分类器
+```powershell
+python -m chemflow3d.scripts.preprocess_modelnet10 `
+  --input-root ModelNet10 `
+  --output-root chemflow3d_cache/modelnet10_1024 `
+  --num-points 1024 `
+  --seed 42
+```
+### E0-2：训练PointNet AE
+
+```powershell
+python -m chemflow3d.scripts.train_ae `
+  --cache-root chemflow3d_cache/modelnet10_1024 `
+  --output chemflow3d_runs/e0_ae `
+  --model ae `
+  --num-points 1024 `
+  --latent-dim 128 `
+  --batch-size 32 `
+  --epochs 100 `
+  --lr 1e-3
+```
+### E0-3：训练点云分类器
+
+```powershell
+python -m chemflow3d.scripts.train_classifier `
+  --cache-root chemflow3d_cache/modelnet10_1024 `
+  --output chemflow3d_runs/e0_classifier `
+  --batch-size 64 `
+  --epochs 100 `
+  --lr 1e-3
+```
+### E0-4：评估 AE 与分类器
 
 ```powershell
 python -m chemflow3d.scripts.eval_e0 `
@@ -99,7 +129,24 @@ python -m chemflow3d.scripts.eval_e0 `
   --output chemflow3d_runs/e0_eval
 ```
 
-### E1：属性 traversal 评估
+### E1-1：几何属性优化
+
+训练 Wave flow：
+
+```powershell
+python -m chemflow3d.scripts.train_flow `
+  --cache-root chemflow3d_cache/modelnet10_1024 `
+  --ae-ckpt chemflow3d_runs/e0_ae/best.pt `
+  --output chemflow3d_runs/e1_wave_height `
+  --pde wave `
+  --guidance height `
+  --epochs 50 `
+  --step-size 0.1 `
+  --lambda-pde 1.0 `
+  --lambda-guide 1.0 `
+  --lambda-ic 0.1
+```
+### E1-2：属性 traversal 评估
 
 ```powershell
 python -m chemflow3d.scripts.eval_traversal `
@@ -109,7 +156,6 @@ python -m chemflow3d.scripts.eval_traversal `
   --property height `
   --output chemflow3d_runs/e1_eval_height_hj
 ```
-
 ### E2：目标类别 traversal 评估
 
 ```powershell
@@ -121,8 +167,47 @@ python -m chemflow3d.scripts.eval_class_traversal `
   --target-class 8 `
   --output chemflow3d_runs/e2_eval_target_8
 ```
+### E3-1. 构造 synthetic sequence
 
-### E3：合成几何方向评估
+yaw rotation
+
+```powershell
+python -m chemflow3d.scripts.build_synthetic_sequences `
+  --cache-root chemflow3d_cache/modelnet10_1024 `
+  --output-root chemflow3d_cache/modelnet10_sequences `
+  --split train `
+  --transform yaw `
+  --steps 8
+```
+
+scale_x
+
+```powershell
+python -m chemflow3d.scripts.build_synthetic_sequences `
+  --cache-root chemflow3d_cache/modelnet10_1024 `
+  --output-root chemflow3d_cache/modelnet10_sequences `
+  --split train `
+  --transform scale_x `
+  --steps 8
+```
+### E3-2. 训练 latent flow
+
+### Wave PDE
+
+```powershell
+python -m chemflow3d.scripts.train_synthetic_flow `
+  --sequence-root chemflow3d_cache/modelnet10_sequences `
+  --index chemflow3d_cache/modelnet10_sequences/index_train_yaw.json `
+  --ae-ckpt chemflow3d_runs/e0_ae/best.pt `
+  --output chemflow3d_runs/e3_wave_yaw `
+  --pde wave `
+  --epochs 50 `
+  --batch-size 16 `
+  --lambda-velocity 1.0 `
+  --lambda-direction 0.1 `
+  --lambda-pde 0.1
+```
+### E3-3：合成几何方向评估
 
 ```powershell
 python -m chemflow3d.scripts.eval_synthetic_flow `
@@ -133,7 +218,7 @@ python -m chemflow3d.scripts.eval_synthetic_flow `
   --output chemflow3d_runs/e3_eval_scale_x
 ```
 
-### 重新生成最终可视化
+### 最终可视化
 
 ```powershell
 python -m chemflow3d.scripts.visualize_final_report `
