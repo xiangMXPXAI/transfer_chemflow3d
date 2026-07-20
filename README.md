@@ -192,7 +192,7 @@ python -m chemflow3d.scripts.build_synthetic_sequences `
 ```
 ### E3-2. 训练 latent flow
 
-### Wave PDE
+Wave PDE
 
 ```powershell
 python -m chemflow3d.scripts.train_synthetic_flow `
