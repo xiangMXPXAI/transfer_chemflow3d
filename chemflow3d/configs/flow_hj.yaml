@@ -1,0 +1,13 @@
+# Reference config for E1/E2 HJ energy-field training.
+pde: hj
+guidance: height
+num_points: 1024
+latent_dim: 128
+hidden_dim: 256
+batch_size: 64
+epochs: 50
+lr: 0.001
+lambda_pde: 1.0
+lambda_guide: 1.0
+lambda_ic: 0.1
+seed: 42

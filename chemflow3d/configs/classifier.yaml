@@ -1,0 +1,7 @@
+# Reference config for E0 classifier training.
+cache_root: chemflow3d_cache/modelnet10_1024
+output: chemflow3d_runs/e0_classifier
+batch_size: 64
+epochs: 100
+lr: 0.001
+seed: 42
