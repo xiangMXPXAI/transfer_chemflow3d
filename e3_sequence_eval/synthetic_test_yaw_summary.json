@@ -1,0 +1,17 @@
+{
+  "num_samples": 908,
+  "mean_mean_recon_chamfer": 0.01727283000946045,
+  "median_mean_recon_chamfer": 0.015210121870040894,
+  "mean_max_recon_chamfer": 0.02730175293982029,
+  "median_max_recon_chamfer": 0.02399517595767975,
+  "mean_mean_latent_step": 0.24122312664985657,
+  "median_mean_latent_step": 0.23399250209331512,
+  "mean_std_latent_step": 0.05240931361913681,
+  "median_std_latent_step": 0.047303054481744766,
+  "mean_latent_endpoint_l2": 0.9306996464729309,
+  "median_latent_endpoint_l2": 0.9240157604217529,
+  "mean_mean_adjacent_latent_cosine": 0.6613548994064331,
+  "median_mean_adjacent_latent_cosine": 0.6764104962348938,
+  "mean_min_adjacent_latent_cosine": 0.4042535722255707,
+  "median_min_adjacent_latent_cosine": 0.4459156394004822
+}
