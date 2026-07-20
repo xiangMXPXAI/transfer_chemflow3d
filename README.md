@@ -1,11 +1,9 @@
 # ChemFlow3D: Latent Flows for 3D Point Clouds
 
-ChemFlow3D 是一个将 ChemFlow-style latent flow 迁移到 3D 点云模态的实验项目。项目以 ModelNet10 为主要数据集，先训练点云自编码器与分类器，再在 latent space 中学习可控流场，用于几何属性编辑、目标类别迁移，以及带 ground truth 的合成几何变换诊断。
 
-核心问题不是简单地“把分子序列模型换成点云模型”，而是验证 latent flow 在 3D 几何空间中到底能学到什么：尺寸、体积这类梯度型方向是否可控，类别方向是否可迁移，旋转这类带环流结构的几何方向是否会暴露势能梯度场的无旋限制。
-# 本项目的算法贡献点
+## 本项目的算法贡献点
 
-当前 ChemFlow3D 项目形成了一个清晰实验框架：
+ChemFlow3D 是一个将 ChemFlow-style latent flow 迁移到 3D 点云模态的实验项目。项目以 ModelNet10 为主要数据集，先训练点云自编码器与分类器，再在 latent space 中学习可控流场，用于几何属性编辑、目标类别迁移，以及带 ground truth 的合成几何变换诊断，形成了一个清晰实验框架：
 
 1. 将 ChemFlow/PoFlow 的 potential flow 迁移到 3D point-cloud latent space；
 2. 同时覆盖 property、class、ground-truth synthetic dynamics 三类任务；
