@@ -1,0 +1,17 @@
+{
+  "tag": "random",
+  "method": "random",
+  "target_class": 2,
+  "source_class": null,
+  "include_target_samples": false,
+  "num_samples": 808,
+  "initial_target_success_rate": 0.006188118830323219,
+  "target_success_rate": 0.007425742689520121,
+  "new_success_rate": 0.002475247485563159,
+  "mean_margin_delta": 0.4026417136192322,
+  "median_margin_delta": 0.2797088623046875,
+  "positive_margin_delta_rate": 0.5903465151786804,
+  "mean_target_prob_delta": 0.0023708001244813204,
+  "positive_target_prob_delta_rate": 0.5891088843345642,
+  "mean_decoded_path_length": 0.002557099098339677
+}

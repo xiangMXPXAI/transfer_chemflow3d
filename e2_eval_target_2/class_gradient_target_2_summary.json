@@ -1,0 +1,17 @@
+{
+  "tag": "class_gradient",
+  "method": "class_gradient",
+  "target_class": 2,
+  "source_class": null,
+  "include_target_samples": false,
+  "num_samples": 808,
+  "initial_target_success_rate": 0.006188118830323219,
+  "target_success_rate": 0.9158415794372559,
+  "new_success_rate": 0.9096534848213196,
+  "mean_margin_delta": 31.802772521972656,
+  "median_margin_delta": 29.75909423828125,
+  "positive_margin_delta_rate": 1.0,
+  "mean_target_prob_delta": 0.9043988585472107,
+  "positive_target_prob_delta_rate": 1.0,
+  "mean_decoded_path_length": 0.025055062025785446
+}

@@ -1,0 +1,17 @@
+{
+  "tag": "hj",
+  "method": "pde",
+  "target_class": 2,
+  "source_class": null,
+  "include_target_samples": false,
+  "num_samples": 808,
+  "initial_target_success_rate": 0.006188118830323219,
+  "target_success_rate": 0.9108911156654358,
+  "new_success_rate": 0.9047029614448547,
+  "mean_margin_delta": 32.89169692993164,
+  "median_margin_delta": 31.494409561157227,
+  "positive_margin_delta_rate": 1.0,
+  "mean_target_prob_delta": 0.9008647799491882,
+  "positive_target_prob_delta_rate": 1.0,
+  "mean_decoded_path_length": 0.025081994011998177
+}

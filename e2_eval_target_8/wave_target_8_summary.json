@@ -1,0 +1,17 @@
+{
+  "tag": "wave",
+  "method": "pde",
+  "target_class": 8,
+  "source_class": null,
+  "include_target_samples": false,
+  "num_samples": 808,
+  "initial_target_success_rate": 0.013613861054182053,
+  "target_success_rate": 0.5334158539772034,
+  "new_success_rate": 0.5222772359848022,
+  "mean_margin_delta": 19.12059783935547,
+  "median_margin_delta": 15.58488655090332,
+  "positive_margin_delta_rate": 0.9554455280303955,
+  "mean_target_prob_delta": 0.5102500319480896,
+  "positive_target_prob_delta_rate": 0.9554455280303955,
+  "mean_decoded_path_length": 0.01771281473338604
+}

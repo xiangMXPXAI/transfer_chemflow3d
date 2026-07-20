@@ -1,0 +1,22 @@
+[
+  {
+    "object_id": "bathtub_0107",
+    "source_class_id": 0,
+    "source_class_name": "bathtub"
+  },
+  {
+    "object_id": "bed_0516",
+    "source_class_id": 1,
+    "source_class_name": "bed"
+  },
+  {
+    "object_id": "chair_0896",
+    "source_class_id": 2,
+    "source_class_name": "chair"
+  },
+  {
+    "object_id": "desk_0203",
+    "source_class_id": 3,
+    "source_class_name": "desk"
+  }
+]
