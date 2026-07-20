@@ -156,14 +156,26 @@ python -m chemflow3d.scripts.eval_traversal `
   --property height `
   --output chemflow3d_runs/e1_eval_height_hj
 ```
-### E2：目标类别 traversal 评估
+### E2：目标类别 traversal 训练与评估
+示例：目标类别 `table`，ModelNet10 class id 为 8。
+
+```powershell
+python -m chemflow3d.scripts.train_flow `
+  --cache-root chemflow3d_cache/modelnet10_1024 `
+  --ae-ckpt chemflow3d_runs/e0_ae/best.pt `
+  --classifier-ckpt chemflow3d_runs/e0_classifier/best.pt `
+  --output chemflow3d_runs/e2_wave_to_table `
+  --pde wave `
+  --guidance class `
+  --target-class 8 `
+  --epochs 50
 
 ```powershell
 python -m chemflow3d.scripts.eval_class_traversal `
   --cache-root chemflow3d_cache/modelnet10_1024 `
   --ae-ckpt chemflow3d_runs/e0_ae/best.pt `
   --classifier-ckpt chemflow3d_runs/e0_classifier/best.pt `
-  --flow-ckpt chemflow3d_runs/e2_hj_to_table/best.pt `
+  --flow-ckpt chemflow3d_runs/e2_wave_to_table/best.pt `
   --target-class 8 `
   --output chemflow3d_runs/e2_eval_target_8
 ```
