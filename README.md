@@ -65,7 +65,7 @@ MXPXAI/
 ├── chemflow3d_runs/                    # 训练权重、评估结果、最终图
 │   └── final_figures/                  # README 与主文档使用的高级可视化
 ├── docs/                               # 两篇主线中文文档
-└── docs_archive/                       # 历史过程报告归档
+                     
 ```
 
 ## 环境
